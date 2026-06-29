@@ -18,47 +18,45 @@ A tool that converts WordPress export XML files into Markdown format suitable fo
 - Python 3.9+
 - WordPress export XML file
 
-[Pandoc](https://pandoc.org/) is required. If you haven't installed it, please download it [here](https://pandoc.org/installing.html). 
-
+[Pandoc](https://pandoc.org/) is required. If you haven't installed it, please download it [here](https://pandoc.org/installing.html).  
 [Python](https://www.python.org/) is required. If you haven't installed it, please download it [here](https://www.python.org/downloads/). Note: On macOS, the script has been verified working with Python v3.9.6 (bundled with Tahoe 26.x).
 
 ## Usage
-1. Prepare media files
+1. Prepare media files  
 Copy the media files (images, videos, etc.) used in WordPress to an appropriate location within your Obsidian Vault, or create a symbolic link to the media file folder.
-2. User settings
+
+3. User settings  
 Open the script in a text editor and modify the **User Settings** section at the beginning of the script to match your environment. 
 `DEFAULT_OUT_DIR`: The default output directory for converted Markdown files. By default, it is set to a path matching the author's environment. 
 `DEFAULT_SKIP_EXISTING`: Whether to skip files that have already been output. The default is `True` (i.e., skip existing files). 
-3. Granting execution permissions
-```bash
-chmod +x wpxml2md.py
-```
-4. Usage examples
-Basic
-```bash
-./wpxml2md.py WordPress.xml
-```
 
-Regenerate all items
-```bash
-./wpxml2md.py WordPress.xml --force
-```
-
-Specify output directory
-```bash
-./wpxml2md.py WordPress.xml --out ~/Desktop/Import
-```
-
-5. Options
-The script supports the following options:
-```text
---include-pages       Export pages as well
---all-status          Export posts regardless of status
---debug-title DEBUG_TITLE
-                      Export only posts whose title contains the specified string
---force               Re-export existing posts
---out OUT             Output directory
-```
+4. Granting execution permissions  
+  ```bash
+  chmod +x wpxml2md.py
+  ```  
+5. Usage examples  
+  Basic
+  ```bash
+  ./wpxml2md.py WordPress.xml
+  ```  
+  Regenerate all items  
+  ```bash
+  ./wpxml2md.py WordPress.xml --force
+  ```  
+  Specify output directory  
+  ```bash
+  ./wpxml2md.py WordPress.xml --out ~/Desktop/Import
+  ```  
+6. Options  
+  The script supports the following options:  
+  ```text
+  --include-pages       Export pages as well
+  --all-status          Export posts regardless of status
+  --debug-title DEBUG_TITLE
+                        Export only posts whose title contains the specified string
+  --force               Re-export existing posts
+  --out OUT             Output directory
+  ```
 
 ## Verified environments
 - macOS Tahoe 26.x
