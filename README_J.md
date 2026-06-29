@@ -18,39 +18,38 @@ WordPress エクスポート XML を Obsidian 向け Markdown に変換するツ
  - Python 3.9+
  - WordPressのエクスポート XML ファイル
  
- [Pandoc](https://pandoc.org/) が必要です。インストールしていない場合、[こちら](https://pandoc.org/installing.html) からダウンロードして下さい。
- 
- [Python](https://www.python.org/) が必要です。インストールしていない場合、[こちら](https://www.python.org/downloads/) からダウンロードして下さい。なお、macOS の場合 Tahoe 26.x 同梱の Python v3.9.6 でも動作確認済みです。
+  [Pandoc](https://pandoc.org/) が必要です。インストールしていない場合、[こちら](https://pandoc.org/installing.html) からダウンロードして下さい。  
+  [Python](https://www.python.org/) が必要です。インストールしていない場合、[こちら](https://www.python.org/downloads/) からダウンロードして下さい。なお、macOS の場合 Tahoe 26.x 同梱の Python v3.9.6 でも動作確認済みです。
  
 ## 使い方
-1. メディアファイルの準備
-   WordPress で用いているメディアファイル（画像、動画など）は、Obsidian Vault 内の適切な場所にコピーを用意するか、メディアファイルフォルダへのシンボリックリンクを張ります。
-2. ユーザー設定項目
-   スクリプトをテキストエディタで開き、スクリプト冒頭の **User Settings** を、お使いの環境に合わせて変更します。
-   `DEFAULT_OUT_DIR`：変換した Markdown のデフォルト出力先。デフォルトでは、筆者の環境に合わせたパスが設定されています。
-   `DEFAULT_SKIP_EXISTING`：出力済みファイルをスキップするかどうか。デフォルトでは、`True` すなわち、スキップするが設定されています。
-3. スクリプト実行権の付与
+1. メディアファイルの準備  
+   WordPress で用いているメディアファイル（画像、動画など）は、Obsidian Vault 内の適切な場所にコピーを用意するか、メディアファイルフォルダへのシンボリックリンクを張ります。  
+2. ユーザー設定項目  
+   スクリプトをテキストエディタで開き、スクリプト冒頭の **User Settings** を、お使いの環境に合わせて変更します。  
+   `DEFAULT_OUT_DIR`：変換した Markdown のデフォルト出力先。デフォルトでは、筆者の環境に合わせたパスが設定されています。  
+   `DEFAULT_SKIP_EXISTING`：出力済みファイルをスキップするかどうか。デフォルトでは、`True` すなわち、スキップするが設定されています。  
+3. スクリプト実行権の付与  
     ```bash
     chmod +x wpxml2md.py
     ```
-4. 実行例
-    基本
+4. 実行例  
+    基本  
     ```bash
     ./wpxml2md.py WordPress.xml
     ```
     
-    全件再生成
+    全件再生成  
     ```bash
     ./wpxml2md.py WordPress.xml --force
     ```
     
-    出力先指定
+    出力先指定  
     ```bash
     ./wpxml2md.py WordPress.xml --out ~/Desktop/Import
     ```
     
-5. オプション
-   スクリプトには以下のオプションがあります。
+5. オプション  
+   スクリプトには以下のオプションがあります。  
     ```text
     --include-pages       固定ページも出力する
     --all-status          公開以外も出力する
