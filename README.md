@@ -19,6 +19,7 @@ A tool that converts WordPress export XML files into Markdown format suitable fo
 - WordPress export XML file
 
 [Pandoc](https://pandoc.org/) is required. If you haven't installed it, please download it [here](https://pandoc.org/installing.html). 
+
 [Python](https://www.python.org/) is required. If you haven't installed it, please download it [here](https://www.python.org/downloads/). Note: On macOS, the script has been verified working with Python v3.9.6 (bundled with Tahoe 26.x).
 
 ## Usage
