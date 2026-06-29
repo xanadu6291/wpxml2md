@@ -19,6 +19,7 @@ WordPress エクスポート XML を Obsidian 向け Markdown に変換するツ
  - WordPressのエクスポート XML ファイル
  
  [Pandoc](https://pandoc.org/) が必要です。インストールしていない場合、[こちら](https://pandoc.org/installing.html) からダウンロードして下さい。
+ 
  [Python](https://www.python.org/) が必要です。インストールしていない場合、[こちら](https://www.python.org/downloads/) からダウンロードして下さい。なお、macOS の場合 Tahoe 26.x 同梱の Python v3.9.6 でも動作確認済みです。
  
 ## 使い方
