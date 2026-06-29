@@ -23,39 +23,39 @@ A tool that converts WordPress export XML files into Markdown format suitable fo
 
 ## Usage
 1. Prepare media files  
-Copy the media files (images, videos, etc.) used in WordPress to an appropriate location within your Obsidian Vault, or create a symbolic link to the media file folder.
+  Copy the media files (images, videos, etc.) used in WordPress to an appropriate location within your Obsidian Vault, or create a symbolic link to the media file folder.
 
 3. User settings  
-Open the script in a text editor and modify the **User Settings** section at the beginning of the script to match your environment. 
-`DEFAULT_OUT_DIR`: The default output directory for converted Markdown files. By default, it is set to a path matching the author's environment. 
-`DEFAULT_SKIP_EXISTING`: Whether to skip files that have already been output. The default is `True` (i.e., skip existing files). 
+  Open the script in a text editor and modify the **User Settings** section at the beginning of the script to match your environment. 
+  `DEFAULT_OUT_DIR`: The default output directory for converted Markdown files. By default, it is set to a path matching the author's environment. 
+  `DEFAULT_SKIP_EXISTING`: Whether to skip files that have already been output. The default is `True` (i.e., skip existing files). 
 
 4. Granting execution permissions  
   ```bash
-  chmod +x wpxml2md.py
+    chmod +x wpxml2md.py
   ```  
 5. Usage examples  
   Basic
   ```bash
-  ./wpxml2md.py WordPress.xml
+    ./wpxml2md.py WordPress.xml
   ```  
   Regenerate all items  
   ```bash
-  ./wpxml2md.py WordPress.xml --force
+    ./wpxml2md.py WordPress.xml --force
   ```  
   Specify output directory  
   ```bash
-  ./wpxml2md.py WordPress.xml --out ~/Desktop/Import
+    ./wpxml2md.py WordPress.xml --out ~/Desktop/Import
   ```  
 6. Options  
   The script supports the following options:  
   ```text
-  --include-pages       Export pages as well
-  --all-status          Export posts regardless of status
-  --debug-title DEBUG_TITLE
-                        Export only posts whose title contains the specified string
-  --force               Re-export existing posts
-  --out OUT             Output directory
+    --include-pages       Export pages as well
+    --all-status          Export posts regardless of status
+    --debug-title DEBUG_TITLE
+                          Export only posts whose title contains the specified string
+    --force               Re-export existing posts
+    --out OUT             Output directory
   ```
 
 ## Verified environments
